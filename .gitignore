@@ -1,0 +1,61 @@
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ========================
+# Virtual environment
+# ========================
+venv/
+.venv/
+env/
+
+# ========================
+# Django
+# ========================
+db.sqlite3
+db.sqlite3-journal
+*.log
+
+# User-uploaded files (MEDIA_ROOT)
+uploads/
+media/
+
+# Output of collectstatic (STATIC_ROOT)
+staticfiles/
+
+# ========================
+# Environment variables & secrets
+# ========================
+.env
+.env.*
+!.env.example
+
+# ========================
+# AWS Elastic Beanstalk
+# ========================
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+# ========================
+# Test and coverage
+# ========================
+.coverage
+htmlcov/
+.pytest_cache/
+
+# ========================
+# Editors & IDEs
+# ========================
+.vscode/
+.idea/
+
+# ========================
+# Operating system
+# ========================
+.DS_Store
+Thumbs.db
+Desktop.ini
