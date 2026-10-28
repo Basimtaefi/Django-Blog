@@ -12,9 +12,9 @@
 </head>
 <body>
     <header id="main-navigation">
-        <h1><a href="">Basim's Blog</a></h1>
+        <h1><a href="{% url "starting-page" %}">Basim's Blog</a></h1>
         <nav>
-            <a href="">All Posts</a>
+            <a href="{% url "posts-page" %}">All Posts</a>
             <button type="button" id="theme-toggle" aria-label="Switch theme">
                 <svg class="theme-toggle__sun" viewBox="0 0 24 24" aria-hidden="true">
                     <circle cx="12" cy="12" r="4"/>

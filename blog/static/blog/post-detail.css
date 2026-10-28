@@ -1,0 +1,105 @@
+/* ==========================================================================
+   post-detail.css - styles for a single post page
+   ========================================================================== */
+
+:root {
+  --post-width: 42rem; /* width of the image and the text panel below it */
+}
+
+/* Summary
+   ========================================================================== */
+#summary {
+  padding: clamp(1.5rem, 4vw, 2.5rem) var(--gutter) 1.25rem;
+}
+
+#summary h2 {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 1.25rem;
+  padding-bottom: 0.1em;
+  text-align: center;
+  text-wrap: balance;
+  font-size: clamp(1.75rem, 5vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, var(--color-text) 15%, var(--color-primary) 55%, var(--color-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 32px var(--glow-1));
+}
+
+/* Image on its own row, author and date underneath */
+#summary article {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+  max-width: var(--post-width);
+  margin-inline: auto;
+}
+
+#summary img {
+  flex: 0 0 100%;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: max(48vh, 12rem); /* keeps the start of the text visible without scrolling */
+  object-fit: cover;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background-color: var(--color-border);
+  box-shadow: var(--shadow);
+}
+
+#summary address {
+  font-style: normal;
+  font-weight: 600;
+}
+
+#summary address::before {
+  content: "";
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-right: 0.6rem;
+  border-radius: 50%;
+  background: var(--gradient-brand);
+  vertical-align: middle;
+}
+
+#summary article div {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+#summary time {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+
+/* Post content
+   ========================================================================== */
+main {
+  width: min(100% - 2rem, var(--post-width));
+  margin: 0 auto clamp(3rem, 8vw, 5rem);
+  padding: clamp(1.25rem, 4vw, 2.25rem);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-card);
+}
+
+main p {
+  margin-bottom: 1.5em;
+  font-size: clamp(1.05rem, 2.2vw, 1.15rem);
+  line-height: 1.85;
+}
+
+main p:last-child {
+  margin-bottom: 0;
+}
