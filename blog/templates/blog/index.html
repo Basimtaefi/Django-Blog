@@ -6,25 +6,11 @@
 {% endblock %}
 
 {% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/post.css" %}">
     <link rel="stylesheet" href="{% static "blog/index.css" %}">
 {% endblock %}
 
 {% block content%}
-    <header id="main-navigation">
-        <h1><a href="">Basim's Blog</a></h1>
-        <nav>
-            <a href="">All Posts</a>
-            <button type="button" id="theme-toggle" aria-label="Switch theme">
-                <svg class="theme-toggle__sun" viewBox="0 0 24 24" aria-hidden="true">
-                    <circle cx="12" cy="12" r="4"/>
-                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
-                </svg>
-                <svg class="theme-toggle__moon" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-                </svg>
-            </button>
-        </nav>
-    </header>
 
     <section id="welcome">
         <header>
@@ -36,22 +22,9 @@
 
     <section id="latest-posts">
         <h2>My Latest Thoughts</h2>
+        
         <ul>
-            <li>
-                <article class="post">
-                    <a href="">
-                        <img src="{% static "blog/images/Mountain.jpeg" %}" alt="Mountains Hiking"/>
-                        <div class="post_content">
-                            <h3>Mountains Hiking</h3>
-                            <p>
-                                There's nothing like the Views you get when hiking in the
-                                mountains! And I wasn't even prepared for what happened whilst
-                                I was enjoying the view!
-                            </p>
-                        </div>
-                    </a>
-                </article>
-            </li>
+            {% include "blog/includes/post.html" %}    
         </ul>
     </section>
 
